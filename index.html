@@ -18,44 +18,49 @@
         header{
             background-color: #F0C9C2;
         }
-        main{
-            background-color: #F0C9C2;
-            padding-top: 5vh;
-            padding-bottom: 1vh;
-            margin-bottom: 2vh;
-        }
-        main div{
-            background-color: #F0C9C2;
-        }
-        .imgCard{
-            width: 100%;
-            height: 250px;
-        }
-        footer{
-            background-color: #F0C9C2;
-            margin-bottom: 1vh;
-        }
-        footer div{
-            padding-top: 2vh;
-            padding-bottom: 2vh;
-        }
-        #footerText1{
-            margin-left: 3vh;
-            margin-top: 7vh;
-        }
-        #footerText2{
-            margin-left: 3vh;
-        }
         nav li a:hover{
             background-color:#BEB3B1;
         }
         nav form a:hover{
             background-color:#BEB3B1;
         }
-        
+        main{
+            background-color: #F0C9C2;
+            padding-top: 5vh;
+            padding-bottom: 1vh;
+        }
+
+        main div{
+            background-color: #F0C9C2;
+        }
+        .imgCard{
+            width: 100%;
+            height: 27vh;
+        }
+
+        footer{
+            background-color: #F0C9C2;
+            height: 10vh;
+        }
+        footer * {
+            margin: 0px;
+            padding: 0px;
+        }
+        footer div{
+            min-height: 100%;
+        }
+        #footerCenter {
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #separador{
+            height: 1vh;
+        }
     </style>
 
-    <body class="row">
+    <body class="m-0 p-0 row">
         <!--Columna izquierda-->
         <div class="col-xl-1"></div>
 
@@ -65,7 +70,7 @@
                 <img src="Recursos/LogoPagina.png" alt="">
             </header>
     
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand navbar-light bg-light">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -94,8 +99,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="index-QuienesSomos.html">¿Quienes Somos?</a>
-                            </li>
-                            
+                            </li>      
                         </ul>
                         <form class="d-flex">
                             <a class="nav-link" href="index-IniciarSesion.html">Iniciar Sesion</a>
@@ -103,9 +107,10 @@
                     </div>
                 </div>
             </nav>
+
+            <div id="separador"></div>
     
             <main>
-
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-8">
@@ -119,7 +124,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-4">
@@ -133,7 +137,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-8">
@@ -147,31 +150,29 @@
                         </div>
                     </div>
                 </div>
-
             </main>
+
+            <div id="separador"></div>
     
             <footer>
                 <div class="row">
-                    <div class="col-4">
-                        <p id="footerText1">&copy; Derechos Reservados 2021</p>
+                    <div class="col-4" id="footerCenter">
+                        <p>&copy; Derechos Reservados 2021</p>
                     </div>
-                    <div class="col-4">
-                        <p id="footerText1">
+                    <div class="col-4" id="footerCenter">
+                        <p>
                             Contactate con los <a href="">desarrolladores</a>.
                         </p>
                     </div>
-                    <div class="col-4">
-                        <div id="footerText2">
-                            <p>Seguinos en:</p>
-                            <img src="Recursos/facebook.png" alt="">
-                            <img src="Recursos/twitter.png" alt="">
-                            <img src="Recursos/instagram.png" alt="">
-                        </div>
+                    <div class="col-4" id="footerCenter">
+                        <span>Seguinos en:</span>
+                        <img src="Recursos/facebook.png" alt="">
+                        <img src="Recursos/twitter.png" alt="">
+                        <img src="Recursos/instagram.png" alt="">
                     </div>
                 </div>
             </footer>
         </div>
-
         <!--Columna derecha-->
         <div class="col-xl-1"></div>
     </body>
