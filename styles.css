@@ -1,0 +1,37 @@
+body{
+    background-color: #948886;
+}
+header{
+    background-color: #F0C9C2;
+}
+nav li a:hover{
+    background-color:#BEB3B1;
+}
+nav form a:hover{
+    background-color:#BEB3B1;
+}
+main{
+    background-color: #F0C9C2;
+    padding-top: 5vh;
+    padding-bottom: 1vh;
+}
+footer{
+    background-color: #F0C9C2;
+    height: 10vh;
+}
+footer * {
+    margin: 0px;
+    padding: 0px;
+}
+footer div{
+    min-height: 100%;
+}
+#footerCenter {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#separador{
+    height: 1vh;
+}
