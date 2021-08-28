@@ -18,37 +18,51 @@
         header{
             background-color: #F0C9C2;
         }
-        main{
-            background-color: #F0C9C2;
-            padding-top: 5vh;
-            padding-bottom: 1vh;
-            margin-bottom: 2vh;
-        }
-        footer{
-            background-color: #F0C9C2;
-            margin-bottom: 1vh;
-        }
-        footer div{
-            padding-top: 2vh;
-            padding-bottom: 2vh;
-        }
-        #footerText1{
-            margin-left: 3vh;
-            margin-top: 7vh;
-        }
-        #footerText2{
-            margin-left: 3vh;
-        }
         nav li a:hover{
             background-color:#BEB3B1;
         }
         nav form a:hover{
             background-color:#BEB3B1;
         }
+        main{
+            background-color: #F0C9C2;
+            height: 71vh;
+            padding-top: 17vh;
+        }
+        footer{
+            background-color: #F0C9C2;
+            height: 10vh;
+        }
+        footer * {
+            margin: 0px;
+            padding: 0px;
+        }
+        footer div{
+            min-height: 100%;
+        }
+        #footerCenter {
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         
+        #ingreseUsuario{
+            margin-top: 2vh;
+        }
+        #ingreseContraseña{
+            margin-top: 2vh;
+        }
+        #iniciarSesion{
+            margin: 0px;
+            margin-top: 3vh;
+        }
+        #separador{
+            height: 1vh;
+        }
     </style>
 
-    <body class="row">
+    <body class="m-0 p-0 row">
         <!--Columna izquierda-->
         <div class="col-xl-1"></div>
 
@@ -58,7 +72,7 @@
                 <img src="Recursos/LogoPagina.png" alt="">
             </header>
     
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand navbar-light bg-light">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -96,30 +110,49 @@
                     </div>
                 </div>
             </nav>
+
+            <div id="separador"></div>
     
-            <main>
+            <main class="row m-0">
+                <div class="col-4 m-0"></div>
+                <div class="col-4 m-0">
 
-               
+                    <h4>Ingrese sus datos para acceder</h4>
 
+                    <form method="post" action="" name="signin-form">
+                        <div class="form-group" id="ingreseUsuario">
+                            <label for="exampleInputEmail1">Nombre de Usuario:</label>
+                            <input type="text" class="form-control" name="username" pattern="[a-zA-Z0-9]+" required aria-describedby="emailHelp" placeholder="Ingrese su nombre de usuario">
+                        </div>
+                        <div class="form-group" id="ingreseContraseña">
+                            <label for="exampleInputPassword1">Contraseña:</label>
+                            <input type="password" class="form-control" name="password" required placeholder="Ingrese su Contraseña">
+                        </div>
+                        <div class="row justify-content-center" id="iniciarSesion">
+                            <button type="submit" class="btn btn-primary" name="login" value="login">Iniciar Sesión</button>
+                        </div>
+                        </form>
+                </div>
+                <div class="col-4 m-0"></div>
             </main>
     
+            <div id="separador"></div>
+
             <footer>
                 <div class="row">
-                    <div class="col-4">
-                        <p id="footerText1">&copy; Derechos Reservados 2021</p>
+                    <div class="col-4" id="footerCenter">
+                        <p>&copy; Derechos Reservados 2021</p>
                     </div>
-                    <div class="col-4">
-                        <p id="footerText1">
+                    <div class="col-4" id="footerCenter">
+                        <p>
                             Contactate con los <a href="">desarrolladores</a>.
                         </p>
                     </div>
-                    <div class="col-4">
-                        <div id="footerText2">
-                            <p>Seguinos en:</p>
-                            <img src="Recursos/facebook.png" alt="">
-                            <img src="Recursos/twitter.png" alt="">
-                            <img src="Recursos/instagram.png" alt="">
-                        </div>
+                    <div class="col-4" id="footerCenter">
+                        <span>Seguinos en:</span>
+                        <img src="Recursos/facebook.png" alt="">
+                        <img src="Recursos/twitter.png" alt="">
+                        <img src="Recursos/instagram.png" alt="">
                     </div>
                 </div>
             </footer>
