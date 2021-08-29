@@ -13,10 +13,21 @@
     </head>
 
     <style>
-        
+        main{
+            background-color: #F0C9C2;
+            height: 71vh;
+            padding-top: 20vh;
+        }
+        #ingreingreseDNIseUsuario{
+            margin-top: 2vh;
+        }
+        #buscarInmueble{
+            margin: 0px;
+            margin-top: 3vh;
+        }
     </style>
 
-    <body class="row">
+    <body class="m-0 p-0 row">
         <!--Columna izquierda-->
         <div class="col-xl-1"></div>
         <!--Contenido de la pagina-->
@@ -65,10 +76,29 @@
             
             <div id="separador"></div>
 
-            <main>
+            <main class="row m-0">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body bg-light">
+                            <h5 class="card-title">Ingrese sus datos</h5>
+                            <p class="card-text">Para acceder a los distintos inmuebles a su nombre y sus respectivo estado debe proporcionar el DNI del propietario.</p>
+                        </div>
 
-
-
+                        <div class="card-body bg-light">
+                            <form method="" action="" name="">
+                                <div class="form-group" id="ingreseDNI">
+                                    <label for="">DNI:</label>
+                                    <input type="text" class="form-control" name="" pattern="[a-zA-Z0-9]+" required>
+                                </div>
+                                <div class="row justify-content-center" id="buscarInmueble">
+                                    <button type="" class="btn btn-primary" name="" value="">Buscar Inmueble</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4"></div>
             </main>
     
             <div id="separador"></div>
