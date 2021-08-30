@@ -18,16 +18,6 @@
             height: 71vh;
             padding-top: 13vh;
         }
-        #ingreseUsuario{
-            margin-top: 2vh;
-        }
-        #ingreseContraseña{
-            margin-top: 2vh;
-        }
-        #iniciarSesion{
-            margin: 0px;
-            margin-top: 3vh;
-        }
     </style>
 
     <body class="m-0 p-0 row">
@@ -86,21 +76,23 @@
                             <h5>Ingrese sus datos para acceder</h5>
                             <p>Si es un empleado el administrador debe de darle un usuario y contraseña para acceder. En caso de que sea un pliente no se le esta permitido acceder.</p>
                         </div>
-                        <div class="card-body bg-light">
-                            <form method="" action="" name="">
-                                <div class="form-group" id="ingreseUsuario">
+                        <form method="" action="" name="">
+                            <div class="card-body bg-light">
+                                <div class="form-group">
                                     <label for="">Nombre de Usuario:</label>
                                     <input type="text" class="form-control" name="" pattern="[a-zA-Z0-9]+" required aria-describedby="emailHelp" placeholder="Nombre de usuario">
                                 </div>
-                                <div class="form-group" id="ingreseContraseña">
+                                <div class="form-group" id="campoDeTexto">
                                     <label for="">Contraseña:</label>
                                     <input type="password" class="form-control" name="" required placeholder="Contraseña">
                                 </div>
-                                <div class="row justify-content-center" id="iniciarSesion">
+                            </div>
+                            <div class="card-body bg-light">
+                                <div class="row justify-content-center">
                                     <button type="" class="btn btn-primary" name="" value="">Iniciar Sesión</button>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div class="col-4"></div>

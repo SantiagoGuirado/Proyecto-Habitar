@@ -13,7 +13,7 @@ nav form a:hover{
 main{
     background-color: #F0C9C2;
     padding-top: 5vh;
-    padding-bottom: 1vh;
+    padding-bottom: 5vh;
 }
 footer{
     background-color: #F0C9C2;
@@ -34,4 +34,7 @@ footer div{
 }
 #separador{
     height: 1vh;
+}
+#campoDeTexto{
+    margin-top: 1vh;
 }
