@@ -30,14 +30,14 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                                <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Inmuebles
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="index-InmueblesBuscar.html">Buscar</a></li>
+                                    <li><a class="dropdown-item" href="index-InmueblesBuscar.php">Buscar</a></li>
                                     <li><a class="dropdown-item" href="">Agregar Nuevo</a></li>
                                 </ul>   
                             </li>
@@ -46,16 +46,16 @@
                                     Clientes
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="index-ClientesBuscar.html">Buscar</a></li>
-                                    <li><a class="dropdown-item" href="index-ClientesAgregarNuevo.html">Agregar Nuevo</a></li>
+                                    <li><a class="dropdown-item" href="index-ClientesBuscar.php">Buscar</a></li>
+                                    <li><a class="dropdown-item" href="index-ClientesAgregarNuevo.php">Agregar Nuevo</a></li>
                                 </ul>   
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index-QuienesSomos.html">¿Quienes Somos?</a>
+                                <a class="nav-link" href="index-QuienesSomos.php">¿Quienes Somos?</a>
                             </li>
                         </ul>
                         <form class="d-flex">
-                            <a class="nav-link" href="index-IniciarSesion.html">Iniciar Sesion</a>
+                            <a class="nav-link" href="index-IniciarSesion.php">Iniciar Sesion</a>
                         </form>
                     </div>
                 </div>

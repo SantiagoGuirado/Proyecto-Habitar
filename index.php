@@ -13,10 +13,16 @@
     </head>
 
     <style>
-        
+        main div{
+            background-color: #F0C9C2;
+        }
+        .imgCard{
+            width: 100%;
+            height: 27vh;
+        }
     </style>
 
-    <body class="row">
+    <body class="m-0 p-0 row">
         <!--Columna izquierda-->
         <div class="col-xl-1"></div>
         <!--Contenido de la pagina-->
@@ -30,15 +36,15 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                                <a class="nav-link active" aria-current="page" href="">Inicio</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Inmuebles
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="index-InmueblesBuscar.html">Buscar</a></li>
-                                    <li><a class="dropdown-item" href="index-InmueblesAgregarNuevo.html">Agregar Nuevo</a></li>
+                                    <li><a class="dropdown-item" href="index-InmueblesBuscar.php">Buscar</a></li>
+                                    <li><a class="dropdown-item" href="index-InmueblesAgregarNuevo.php">Agregar Nuevo</a></li>
                                 </ul>   
                             </li>
                             <li class="nav-item dropdown">
@@ -46,31 +52,67 @@
                                     Clientes
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="index-ClientesBuscar.html">Buscar</a></li>
-                                    <li><a class="dropdown-item" href="index-ClientesAgregarNuevo.html">Agregar Nuevo</a></li>
+                                    <li><a class="dropdown-item" href="index-ClientesBuscar.php">Buscar</a></li>
+                                    <li><a class="dropdown-item" href="index-ClientesAgregarNuevo.php">Agregar Nuevo</a></li>
                                 </ul>   
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index-QuienesSomos.html">¿Quienes Somos?</a>
-                            </li>
+                                <a class="nav-link" href="index-QuienesSomos.php">¿Quienes Somos?</a>
+                            </li>      
                         </ul>
                         <form class="d-flex">
-                            <a class="nav-link" href="index-IniciarSesion.html">Iniciar Sesion</a>
+                            <a class="nav-link" href="index-IniciarSesion.php">Iniciar Sesion</a>
                         </form>
                     </div>
                 </div>
             </nav>
-    
-            <div id="separador"></div>
 
+            <div id="separador"></div>
+    
             <main>
-
-               
-
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Salones Comerciales</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="Recursos/SalonComercial.jpg" class="imgCard rounded-start" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="Recursos/Oficina.jpg" class="imgCard rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Oficinas</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Viviendas Particulares</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="Recursos/ViviendaParticular.jpeg" class="imgCard rounded-start" alt="...">
+                        </div>
+                    </div>
+                </div>
             </main>
-    
-            <div id="separador"></div>
 
+            <div id="separador"></div>
+    
             <footer>
                 <div class="row">
                     <div class="col-4" id="footerCenter">

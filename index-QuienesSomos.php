@@ -9,18 +9,14 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-        <link href="./styles.css" rel="stylesheet" type="text/css" media="all">
+        <link href="styles.css" rel="stylesheet" type="text/css" media="all">
     </head>
 
     <style>
-        main{
-            background-color: #F0C9C2;
-            height: 71vh;
-            padding-top: 13vh;
-        }
+        
     </style>
 
-    <body class="m-0 p-0 row">
+    <body class="row">
         <!--Columna izquierda-->
         <div class="col-xl-1"></div>
         <!--Contenido de la pagina-->
@@ -34,15 +30,15 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                                <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Inmuebles
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="index-InmueblesBuscar.html">Buscar</a></li>
-                                    <li><a class="dropdown-item" href="index-InmueblesAgregarNuevo.html">Agregar Nuevo</a></li>
+                                    <li><a class="dropdown-item" href="index-InmueblesBuscar.php">Buscar</a></li>
+                                    <li><a class="dropdown-item" href="index-InmueblesAgregarNuevo.php">Agregar Nuevo</a></li>
                                 </ul>   
                             </li>
                             <li class="nav-item dropdown">
@@ -50,52 +46,27 @@
                                     Clientes
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="index-ClientesBuscar.html">Buscar</a></li>
-                                    <li><a class="dropdown-item" href="index-ClientesAgregarNuevo.html">Agregar Nuevo</a></li>
+                                    <li><a class="dropdown-item" href="index-ClientesBuscar.php">Buscar</a></li>
+                                    <li><a class="dropdown-item" href="index-ClientesAgregarNuevo.php">Agregar Nuevo</a></li>
                                 </ul>   
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index-QuienesSomos.html">¿Quienes Somos?</a>
+                                <a class="nav-link" href="">¿Quienes Somos?</a>
                             </li>
                         </ul>
                         <form class="d-flex">
-                            <a class="nav-link" href="">Iniciar Sesion</a>
+                            <a class="nav-link" href="index-IniciarSesion.php">Iniciar Sesion</a>
                         </form>
                     </div>
                 </div>
             </nav>
-
-            <div id="separador"></div>
     
-            <main class="row m-0">
-                <div class="col-4"></div>
-                <div class="col-4">
+            <div id="separador"></div>
 
-                    <div class="card">
-                        <div class="card-body bg-light">
-                            <h5>Ingrese sus datos para acceder</h5>
-                            <p>Si es un empleado el administrador debe de darle un usuario y contraseña para acceder. En caso de que sea un pliente no se le esta permitido acceder.</p>
-                        </div>
-                        <form method="" action="" name="">
-                            <div class="card-body bg-light">
-                                <div class="form-group">
-                                    <label for="">Nombre de Usuario:</label>
-                                    <input type="text" class="form-control" name="" pattern="[a-zA-Z0-9]+" required aria-describedby="emailHelp" placeholder="Nombre de usuario">
-                                </div>
-                                <div class="form-group" id="campoDeTexto">
-                                    <label for="">Contraseña:</label>
-                                    <input type="password" class="form-control" name="" required placeholder="Contraseña">
-                                </div>
-                            </div>
-                            <div class="card-body bg-light">
-                                <div class="row justify-content-center">
-                                    <button type="" class="btn btn-primary" name="" value="">Iniciar Sesión</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-4"></div>
+            <main>
+
+               
+
             </main>
     
             <div id="separador"></div>
