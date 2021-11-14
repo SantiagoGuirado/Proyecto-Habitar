@@ -25,6 +25,10 @@
         <div class="col-xl-1"></div>
         <!--Contenido de la pagina-->
         <div class="col-xl-10">
+            <?php
+                include('login.php');
+            ?>
+
             <header>
                 <img src="Recursos/LogoPagina.png" alt="">
             </header>
@@ -42,7 +46,9 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="index-InmueblesBuscar.php">Buscar</a></li>
+                                    <!--
                                     <li><a class="dropdown-item" href="index-InmueblesAgregarNuevo.php">Agregar Nuevo</a></li>
+                                    -->
                                 </ul>   
                             </li>
                             <li class="nav-item dropdown">
@@ -51,7 +57,9 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="index-ClientesBuscar.php">Buscar</a></li>
+                                    <!--
                                     <li><a class="dropdown-item" href="index-ClientesAgregarNuevo.php">Agregar Nuevo</a></li>
+                                    -->
                                 </ul>   
                             </li>
                             <li class="nav-item">
@@ -76,20 +84,21 @@
                             <h5>Ingrese sus datos para acceder</h5>
                             <p>Si es un empleado el administrador debe de darle un usuario y contraseña para acceder. En caso de que sea un pliente no se le esta permitido acceder.</p>
                         </div>
-                        <form method="" action="" name="">
+                        <form method="post" action="" name="singup-form">
                             <div class="card-body bg-light">
                                 <div class="form-group">
                                     <label for="">Nombre de Usuario:</label>
-                                    <input type="text" class="form-control" name="" pattern="[a-zA-Z0-9]+" required aria-describedby="emailHelp" placeholder="Nombre de usuario">
+                                    <input type="text" class="form-control" name="ussername" pattern="[a-zA-Z0-9]+" required aria-describedby="emailHelp" 
+                                    placeholder="Nombre de usuario" required>
                                 </div>
                                 <div class="form-group" id="campoDeTexto">
                                     <label for="">Contraseña:</label>
-                                    <input type="password" class="form-control" name="" required placeholder="Contraseña">
+                                    <input type="password" class="form-control" name="password" required placeholder="Contraseña" required>
                                 </div>
                             </div>
                             <div class="card-body bg-light">
                                 <div class="row justify-content-center">
-                                    <button type="" class="btn btn-primary" name="" value="">Iniciar Sesión</button>
+                                    <button type="submit" class="btn btn-primary" name="login" value="login">Iniciar Sesión</button>
                                 </div>
                             </div>
                         </form>
