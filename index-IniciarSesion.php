@@ -25,9 +25,6 @@
         <div class="col-xl-1"></div>
         <!--Contenido de la pagina-->
         <div class="col-xl-10">
-            <?php
-                include('login.php');
-            ?>
 
             <header>
                 <img src="Recursos/LogoPagina.png" alt="">

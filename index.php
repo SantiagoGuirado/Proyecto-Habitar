@@ -22,6 +22,10 @@
         }
     </style>
 
+    <?php
+        include('connect.php');
+    ?>
+
     <body class="m-0 p-0 row">
         <!--Columna izquierda-->
         <div class="col-xl-1"></div>

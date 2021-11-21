@@ -1,20 +1,16 @@
 <?php
-    //Definicion de los atributos necesarios para la conexion a la base de datos
-    $cons_equipo="localhost";
-    $cons_usuario="ProyectoHabitar";
-    $cons_contrasenia="thechimango98";
-    $cons_base_datos="proyectohabitar";
+    //Definicion de los atributos necesarios para la conexion a la base de datos.
+    $cons_Server="localhost";
+    $cons_Usuario="root";
+    $cons_DataBase="ProyectoHabitar";
 
-    try {
-        //se realiza la conexion a la base de datos
-        $obj_conexion = new mysqli($cons_equipo, $cons_usuario, $cons_contrasenia, $cons_base_datos);
-        //se verifica que la conexion a la base de datos se realizara con exito
-        if(!$obj_conexion)
-        {
-            echo '<script>alert("No se pudo establecer conexion con la base de datos.");</script>';
-        }
-    } catch (Exception $e) {
-        echo $e->getMessage();
-        die();
+    //se realiza la conexion a la base de datos.
+    $conexion = new mysqli($cons_Server, $cons_Usuario, "", $cons_DataBase);
+    
+    //Se verifica que la conexion se haya realisado correctamente.
+    if($conexion -> connect_errno) {
+        echo'<script type="text/javascript">
+        alert("Problema al conectarse con la base de datos: Error '.$conexion -> connect_errno.'");</script>';
     }
+
 ?>
