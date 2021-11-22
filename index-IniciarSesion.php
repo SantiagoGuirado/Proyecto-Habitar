@@ -15,8 +15,8 @@
     <style>
         main{
             background-color: #F0C9C2;
-            height: 71vh;
-            padding-top: 13vh;
+            height: 82vh;
+            padding-top: 5vh;
         }
     </style>
 
@@ -79,23 +79,23 @@
                     <div class="card">
                         <div class="card-body bg-light">
                             <h5>Ingrese sus datos para acceder</h5>
-                            <p>Si es un empleado el administrador debe de darle un usuario y contraseña para acceder. En caso de que sea un pliente no se le esta permitido acceder.</p>
+                            <p>Si es un empleado, el administrador debe de darle un usuario y contraseña para acceder. En caso de que sea un cliente no tiene permitido acceder.</p>
                         </div>
-                        <form method="post" action="" name="singup-form">
+                        <form method="post" action="login.php" name="singup-form">
                             <div class="card-body bg-light">
                                 <div class="form-group">
                                     <label for="">Nombre de Usuario:</label>
-                                    <input type="text" class="form-control" name="ussername" pattern="[a-zA-Z0-9]+" required aria-describedby="emailHelp" 
+                                    <input type="text" class="form-control" name="usuario" pattern="[a-zA-Z0-9]+" required aria-describedby="emailHelp" 
                                     placeholder="Nombre de usuario" required>
                                 </div>
                                 <div class="form-group" id="campoDeTexto">
                                     <label for="">Contraseña:</label>
-                                    <input type="password" class="form-control" name="password" required placeholder="Contraseña" required>
+                                    <input type="password" class="form-control" name="contrasenia" required placeholder="Contraseña" required>
                                 </div>
                             </div>
                             <div class="card-body bg-light">
                                 <div class="row justify-content-center">
-                                    <button type="submit" class="btn btn-primary" name="login" value="login">Iniciar Sesión</button>
+                                    <button type="submit" class="btn btn-primary" name="submit" value="Ingresar">Iniciar Sesión</button>
                                 </div>
                             </div>
                         </form>
@@ -128,4 +128,15 @@
         <!--Columna derecha-->
         <div class="col-xl-1"></div>
     </body>
+
+    <?php
+        if(isset($_GET["varError"])){
+            $error = $_GET["varError"];    
+            if ($error == 1) {
+                echo'<script type="text/javascript">
+                alert("Usuario o contraseña incorrectos!");
+                </script>';
+            }
+        }
+    ?>
 </html>

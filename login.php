@@ -4,27 +4,29 @@
     session_start();
 
     //Obtenemos el usuario y contraseña del inicio de secion
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $usuario = $_POST['usuario'];
+    $contrasenia = $_POST['contrasenia'];
 
     //Preparamos la consulta
-    $query = $connection->prepare("SELECT * FROM users WHERE USERNAME=:username");
-    $query->bindParam("username", $username, PDO::PARAM_STR);
-    $query->execute();
+    $query = "SELECT COUNT(*) AS contar FROM usuarios WHERE usuario = '$usuario' AND contrasenia = '$contrasenia'";
+    //Se realiza la consulta
+    $consulta = mysqli_query($conexion, $query) or die( mysqli_error($conexion));
+    $arrayResultado = mysqli_fetch_array($consulta);
+    
+    if ($arrayResultado['contar'] > 0) {
+        $_SESSION['nombreUsuario'] = $usuario;
 
-    //obtenemos el resultado de la consulta
-    $result = $query->fetch(PDO::FETCH_ASSOC);
+        //Se busca el nombre y apellido del usuario
+        $query = "SELECT nombre, apellido FROM usuarios WHERE usuario = '$usuario' AND contrasenia = '$contrasenia'";
+        $consulta = mysqli_query($conexion, $query) or die( mysqli_error($conexion));
+        $arrayResultado = mysqli_fetch_array($consulta);
+        
+        $nombre = $arrayResultado['nombre'] . ' ' . $arrayResultado['apellido'];
+        $_SESSION['nombre'] = $nombre;
 
-    //verificamos si el usuario y contraseña son correctos
-    if (!$result) {
-        echo '<p class="error">Username password combination is wrong!</p>';
+        header("location: /index.php");
     } else {
-        if (password_verify($password, $result['PASSWORD'])) {
-            $_SESSION['user_id'] = $result['ID'];
-            echo '<p class="success">Congratulations, you are logged in!</p>';
-        } else {
-            echo '<p class="error">Username password combination is wrong!</p>';
-        }
+        $error = 1;
+        header("location: /index-IniciarSesion.php?varError=$error");
     }
-
 ?>
