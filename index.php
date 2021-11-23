@@ -49,12 +49,10 @@
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="index-InmueblesBuscar.php">Buscar</a></li>
                                     <?php
-                                        if (isset($_SESSION['nombreUsuario'])) {
-                                            if (!$_SESSION['nombreUsuario'] == "") {
-                                                echo '
-                                                <li><a class="dropdown-item" href="index-InmueblesAgregarNuevo.php">Agregar Nuevo</a></li>
-                                                ';
-                                            }
+                                        if (isset($_SESSION['nombreUsuario']) && !$_SESSION['nombreUsuario'] == "") {
+                                            echo '
+                                            <li><a class="dropdown-item" href="index-InmueblesAgregarNuevo.php">Agregar Nuevo</a></li>
+                                            ';
                                         }
                                     ?>
                                 </ul>   
@@ -66,12 +64,10 @@
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="index-ClientesBuscar.php">Buscar</a></li>
                                     <?php
-                                        if (isset($_SESSION['nombreUsuario'])) {
-                                            if (!$_SESSION['nombreUsuario'] == "") {
-                                                echo '
-                                                <li><a class="dropdown-item" href="index-ClientesAgregarNuevo.php">Agregar Nuevo</a></li>
-                                                ';
-                                            }
+                                        if (isset($_SESSION['nombreUsuario']) && !$_SESSION['nombreUsuario'] == "") {
+                                            echo '
+                                            <li><a class="dropdown-item" href="index-ClientesAgregarNuevo.php">Agregar Nuevo</a></li>
+                                            ';
                                         }
                                     ?>
                                 </ul>   

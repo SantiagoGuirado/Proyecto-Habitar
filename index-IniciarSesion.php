@@ -43,9 +43,6 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="index-InmueblesBuscar.php">Buscar</a></li>
-                                    <!--
-                                    <li><a class="dropdown-item" href="index-InmueblesAgregarNuevo.php">Agregar Nuevo</a></li>
-                                    -->
                                 </ul>   
                             </li>
                             <li class="nav-item dropdown">
@@ -54,9 +51,6 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="index-ClientesBuscar.php">Buscar</a></li>
-                                    <!--
-                                    <li><a class="dropdown-item" href="index-ClientesAgregarNuevo.php">Agregar Nuevo</a></li>
-                                    -->
                                 </ul>   
                             </li>
                             <li class="nav-item">
