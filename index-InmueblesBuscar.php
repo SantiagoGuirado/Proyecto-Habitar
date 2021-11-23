@@ -20,6 +20,10 @@
         }
     </style>
 
+    <?php
+        session_start();
+    ?>
+
     <body class="m-0 p-0 row">
         <!--Columna izquierda-->
         <div class="col-xl-1"></div>
@@ -42,9 +46,13 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="">Buscar</a></li>
-                                    <!--
-                                    <li><a class="dropdown-item" href="index-InmueblesAgregarNuevo.php">Agregar Nuevo</a></li>
-                                    -->
+                                    <?php
+                                        if (isset($_SESSION['nombreUsuario']) && !$_SESSION['nombreUsuario'] == "") {
+                                            echo '
+                                            <li><a class="dropdown-item" href="index-InmueblesAgregarNuevo.php">Agregar Nuevo</a></li>
+                                            ';
+                                        }
+                                    ?>
                                 </ul>   
                             </li>
                             <li class="nav-item dropdown">
@@ -53,9 +61,13 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="index-ClientesBuscar.php">Buscar</a></li>
-                                    <!--
-                                    <li><a class="dropdown-item" href="index-ClientesAgregarNuevo.php">Agregar Nuevo</a></li>
-                                    -->
+                                    <?php
+                                        if (isset($_SESSION['nombreUsuario']) && !$_SESSION['nombreUsuario'] == "") {
+                                            echo '
+                                            <li><a class="dropdown-item" href="index-ClientesAgregarNuevo.php">Agregar Nuevo</a></li>
+                                            ';
+                                        }
+                                    ?>
                                 </ul>   
                             </li>
                             <li class="nav-item">
@@ -63,7 +75,25 @@
                             </li>
                         </ul>
                         <form class="d-flex">
-                            <a class="nav-link" href="index-IniciarSesion.php">Iniciar Sesion</a>
+                            <?php
+                                if (isset($_SESSION['nombreUsuario'])) {
+                                    if (!$_SESSION['nombreUsuario'] == "") {
+                                        echo '
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            ' . $_SESSION['nombreUsuario'] . '
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item disabled">' .  $_SESSION['nombre'] . '</a></li>
+                                                <li><a class="dropdown-item" href="cerrarSesion.php">Cerrar Sesión</a></li>
+                                            </ul>
+                                        </div>
+                                        '; 
+                                    }
+                                } else {
+                                    echo '<a class="btn nav-link" href="index-IniciarSesion.php">Iniciar Sesion</a>';
+                                }
+                            ?>
                         </form>
                     </div>
                 </div>
